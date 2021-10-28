@@ -36,9 +36,9 @@ serverName = socket.gethostname()
 clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 clientSocket.settimeout(2)
-name = input("Enter file name : ")
-chunk_size = input("enter size of chunk : ")
-path= input("Enter output path : ")
+name = input("Enter file name for get json view: ")  ### like www.reddit.com
+chunk_size = input("enter size of chunk : ")  ### 
+path= input("Enter output path : ")  ### 
 clientSocket.send(name.encode())
 clientSocket.send(chunk_size.encode())
 chunk_size2 = int(chunk_size)
